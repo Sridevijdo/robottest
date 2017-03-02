@@ -12,11 +12,12 @@ Suite Teardown    Close Browser
 Test Setup        Go To Anchors Page
 Test Template     Anchor with Valid Text ID Name XPath Should Pass
 Resource          resource.robot
-$testAnchorText    Self Referencing Link
+
 *** Test Cases ***               AnchorText               AnchorID    AnchorName    XPath
 Valid AnchorName                 Self Referencing Link    a1          na1           //div[@id='a1']
 
 *** Keywords ***
 Anchor with Valid Text ID Name XPath Should Pass
     [Arguments]    ${anchorText}    ${anchorID}    ${anchorName}    ${anchorXpath}
-    GEUT   ${anchorID}
+    GEUTID   ${anchorID}
+    
