@@ -24,7 +24,7 @@ Go To Anchors Page
     Anchors Page Should Be Open
 
 Anchors Page Should Be Open
-    Title Should Be    Simple HTML5 pages - Anchor Pages
+    Title Should Be    Simple HTML5 - Anchor Pages
 
 ..Get Element Under Test By ID
 GEUTID
@@ -45,3 +45,4 @@ GEUTX
 ..TODO: complete the test
 ..GEUTC
 ..    [Arguments]    ${elementText}
+
