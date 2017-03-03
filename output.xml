@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20170303 01:02:23.675" generator="Robot 3.0.2 (Python 2.7.13 on win32)">
+<suite source="C:\Users\neela\Desktop\robottest-master\test\rf\com\jaydevops\Test" id="s1" name="Test">
+<suite source="C:\Users\neela\Desktop\robottest-master\test\rf\com\jaydevops\Test\anchors-valid.robot" id="s1-s1" name="Anchors-Valid">
+<kw type="setup" name="Open Welcome Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:23.862" level="INFO">Opening browser 'chrome' to base url 'https://vairamsvsjdo.github.io/simplehtml5/index.html'</msg>
+<status status="PASS" endtime="20170303 01:02:27.795" starttime="20170303 01:02:23.861"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170303 01:02:29.058" starttime="20170303 01:02:27.796"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170303 01:02:29.060" starttime="20170303 01:02:29.059"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:29.088" level="INFO">Current location contains 'https://vairamsvsjdo.github.io/simplehtml5/index.html'.</msg>
+<status status="PASS" endtime="20170303 01:02:29.088" starttime="20170303 01:02:29.061"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.090" starttime="20170303 01:02:23.861"></status>
+</kw>
+<test id="s1-s1-t1" name="Valid AnchorName">
+<kw type="setup" name="Go To Anchors Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ANCHORS URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:29.096" level="INFO">Opening url 'https://vairamsvsjdo.github.io/simplehtml5/anchors.html'</msg>
+<status status="PASS" endtime="20170303 01:02:29.272" starttime="20170303 01:02:29.094"></status>
+</kw>
+<kw name="Anchors Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Simple HTML5 - Anchor Pages</arg>
+</arguments>
+<msg timestamp="20170303 01:02:29.334" level="INFO">Page title is 'Simple HTML5 - Anchor Pages'.</msg>
+<status status="PASS" endtime="20170303 01:02:29.334" starttime="20170303 01:02:29.274"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.335" starttime="20170303 01:02:29.273"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.335" starttime="20170303 01:02:29.093"></status>
+</kw>
+<kw name="Anchor with Valid ID Should Pass">
+<arguments>
+<arg>Self Referencing Link</arg>
+<arg>a1</arg>
+<arg>n2a1</arg>
+<arg>//div[@id='a1']</arg>
+</arguments>
+<kw name="GEUTID" library="resource">
+<arguments>
+<arg>${anchorID}</arg>
+</arguments>
+<kw name="Get Webelement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given locator.</doc>
+<arguments>
+<arg>id=${elementID}</arg>
+</arguments>
+<assign>
+<var>${elem}</var>
+</assign>
+<msg timestamp="20170303 01:02:29.380" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="1f34fb369fb799e07ab636d27556f601", element="0.3047473278886679-1")&gt;</msg>
+<status status="PASS" endtime="20170303 01:02:29.381" starttime="20170303 01:02:29.337"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.382" starttime="20170303 01:02:29.337"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.383" starttime="20170303 01:02:29.336"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:29.384" critical="yes" starttime="20170303 01:02:29.091"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170303 01:02:32.573" starttime="20170303 01:02:29.385"></status>
+</kw>
+<doc>A test suite containing tests related to webpage elements.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" endtime="20170303 01:02:32.573" starttime="20170303 01:02:23.854"></status>
+</suite>
+<suite source="C:\Users\neela\Desktop\robottest-master\test\rf\com\jaydevops\Test\GetContent.robot" id="s1-s2" name="GetContent">
+<kw type="setup" name="Open Welcome Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:32.579" level="INFO">Opening browser 'chrome' to base url 'https://vairamsvsjdo.github.io/simplehtml5/index.html'</msg>
+<status status="PASS" endtime="20170303 01:02:36.506" starttime="20170303 01:02:32.579"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170303 01:02:37.794" starttime="20170303 01:02:36.507"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170303 01:02:37.798" starttime="20170303 01:02:37.795"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:37.822" level="INFO">Current location contains 'https://vairamsvsjdo.github.io/simplehtml5/index.html'.</msg>
+<status status="PASS" endtime="20170303 01:02:37.823" starttime="20170303 01:02:37.800"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:37.823" starttime="20170303 01:02:32.578"></status>
+</kw>
+<test id="s1-s2-t1" name="GEUTC">
+<kw type="setup" name="Go To Anchors Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ANCHORS URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:37.827" level="INFO">Opening url 'https://vairamsvsjdo.github.io/simplehtml5/anchors.html'</msg>
+<status status="PASS" endtime="20170303 01:02:38.002" starttime="20170303 01:02:37.826"></status>
+</kw>
+<kw name="Anchors Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Simple HTML5 - Anchor Pages</arg>
+</arguments>
+<msg timestamp="20170303 01:02:38.027" level="INFO">Page title is 'Simple HTML5 - Anchor Pages'.</msg>
+<status status="PASS" endtime="20170303 01:02:38.027" starttime="20170303 01:02:38.004"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:38.028" starttime="20170303 01:02:38.003"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:38.028" starttime="20170303 01:02:37.825"></status>
+</kw>
+<kw name="Anchor with Valid Text Should Pass">
+<arguments>
+<arg>Self Referencing Index 2</arg>
+<arg>d2a2</arg>
+<arg>n22a2</arg>
+<arg>//*[@id="d2a2"]</arg>
+</arguments>
+<kw name="GEUTC" library="resource">
+<arguments>
+<arg>${anchorText}</arg>
+</arguments>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>link=${elementValue}</arg>
+</arguments>
+<assign>
+<var>${elem}</var>
+</assign>
+<msg timestamp="20170303 01:02:38.121" level="INFO">${elem} = Self Referencing Index 2</msg>
+<status status="PASS" endtime="20170303 01:02:38.122" starttime="20170303 01:02:38.031"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:38.122" starttime="20170303 01:02:38.030"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:38.123" starttime="20170303 01:02:38.029"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:38.123" critical="yes" starttime="20170303 01:02:37.824"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170303 01:02:41.315" starttime="20170303 01:02:38.124"></status>
+</kw>
+<doc>A test suite containing tests related to webpage elements.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" endtime="20170303 01:02:41.315" starttime="20170303 01:02:32.574"></status>
+</suite>
+<suite source="C:\Users\neela\Desktop\robottest-master\test\rf\com\jaydevops\Test\GetName.robot" id="s1-s3" name="GetName">
+<kw type="setup" name="Open Welcome Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:41.322" level="INFO">Opening browser 'chrome' to base url 'https://vairamsvsjdo.github.io/simplehtml5/index.html'</msg>
+<status status="PASS" endtime="20170303 01:02:45.432" starttime="20170303 01:02:41.322"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170303 01:02:46.753" starttime="20170303 01:02:45.432"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170303 01:02:46.755" starttime="20170303 01:02:46.754"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:46.772" level="INFO">Current location contains 'https://vairamsvsjdo.github.io/simplehtml5/index.html'.</msg>
+<status status="PASS" endtime="20170303 01:02:46.773" starttime="20170303 01:02:46.756"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:46.773" starttime="20170303 01:02:41.322"></status>
+</kw>
+<test id="s1-s3-t1" name="GEUTN">
+<kw type="setup" name="Go To Anchors Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ANCHORS URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:46.776" level="INFO">Opening url 'https://vairamsvsjdo.github.io/simplehtml5/anchors.html'</msg>
+<status status="PASS" endtime="20170303 01:02:46.957" starttime="20170303 01:02:46.776"></status>
+</kw>
+<kw name="Anchors Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Simple HTML5 - Anchor Pages</arg>
+</arguments>
+<msg timestamp="20170303 01:02:46.968" level="INFO">Page title is 'Simple HTML5 - Anchor Pages'.</msg>
+<status status="PASS" endtime="20170303 01:02:46.969" starttime="20170303 01:02:46.959"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:46.969" starttime="20170303 01:02:46.958"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:46.970" starttime="20170303 01:02:46.775"></status>
+</kw>
+<kw name="Anchor with Valid Name Should Pass">
+<arguments>
+<arg>Self Referencing Index 2</arg>
+<arg>d2a2</arg>
+<arg>n22a2</arg>
+<arg>//*[@id="d2a2"]</arg>
+</arguments>
+<kw name="GEUTN" library="resource">
+<arguments>
+<arg>${anchorName}</arg>
+</arguments>
+<kw name="Get Webelement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given locator.</doc>
+<arguments>
+<arg>name=${elementName}</arg>
+</arguments>
+<assign>
+<var>${elem}</var>
+</assign>
+<msg timestamp="20170303 01:02:47.009" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="64f37524dc3291deb7d928adf77fc0a3", element="0.82513153007249-1")&gt;</msg>
+<status status="PASS" endtime="20170303 01:02:47.009" starttime="20170303 01:02:46.973"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:47.010" starttime="20170303 01:02:46.972"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:47.010" starttime="20170303 01:02:46.971"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:47.011" critical="yes" starttime="20170303 01:02:46.774"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170303 01:02:50.164" starttime="20170303 01:02:47.012"></status>
+</kw>
+<doc>A test suite containing tests related to webpage elements.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" endtime="20170303 01:02:50.164" starttime="20170303 01:02:41.317"></status>
+</suite>
+<suite source="C:\Users\neela\Desktop\robottest-master\test\rf\com\jaydevops\Test\GetXpath.robot" id="s1-s4" name="GetXpath">
+<kw type="setup" name="Open Welcome Page" library="resource">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:50.173" level="INFO">Opening browser 'chrome' to base url 'https://vairamsvsjdo.github.io/simplehtml5/index.html'</msg>
+<status status="PASS" endtime="20170303 01:02:54.104" starttime="20170303 01:02:50.172"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20170303 01:02:55.360" starttime="20170303 01:02:54.104"></status>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20170303 01:02:55.364" starttime="20170303 01:02:55.363"></status>
+</kw>
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>${WELCOME URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:55.396" level="INFO">Current location contains 'https://vairamsvsjdo.github.io/simplehtml5/index.html'.</msg>
+<status status="PASS" endtime="20170303 01:02:55.397" starttime="20170303 01:02:55.365"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.397" starttime="20170303 01:02:50.172"></status>
+</kw>
+<test id="s1-s4-t1" name="GEUTX">
+<kw type="setup" name="Go To Anchors Page" library="resource">
+<kw name="Go To" library="Selenium2Library">
+<doc>Navigates the active browser instance to the provided URL.</doc>
+<arguments>
+<arg>${ANCHORS URL}</arg>
+</arguments>
+<msg timestamp="20170303 01:02:55.402" level="INFO">Opening url 'https://vairamsvsjdo.github.io/simplehtml5/anchors.html'</msg>
+<status status="PASS" endtime="20170303 01:02:55.633" starttime="20170303 01:02:55.401"></status>
+</kw>
+<kw name="Anchors Page Should Be Open" library="resource">
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Simple HTML5 - Anchor Pages</arg>
+</arguments>
+<msg timestamp="20170303 01:02:55.650" level="INFO">Page title is 'Simple HTML5 - Anchor Pages'.</msg>
+<status status="PASS" endtime="20170303 01:02:55.650" starttime="20170303 01:02:55.635"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.651" starttime="20170303 01:02:55.634"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.651" starttime="20170303 01:02:55.399"></status>
+</kw>
+<kw name="Anchor with Valid XPath Should Pass">
+<arguments>
+<arg>Self Referencing Index 2</arg>
+<arg>d2a2</arg>
+<arg>n22a2</arg>
+<arg>//*[@id="d2a2"]</arg>
+</arguments>
+<kw name="GEUTX" library="resource">
+<arguments>
+<arg>${anchorXpath}</arg>
+</arguments>
+<kw name="Get Webelement" library="Selenium2Library">
+<doc>Returns the first WebElement matching the given locator.</doc>
+<arguments>
+<arg>xpath=${elementXpath}</arg>
+</arguments>
+<assign>
+<var>${elem}</var>
+</assign>
+<msg timestamp="20170303 01:02:55.702" level="INFO">${elem} = &lt;selenium.webdriver.remote.webelement.WebElement (session="0f18512bb683fe67c43670d17617b973", element="0.5033206058686468-1")&gt;</msg>
+<status status="PASS" endtime="20170303 01:02:55.703" starttime="20170303 01:02:55.654"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.703" starttime="20170303 01:02:55.653"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.704" starttime="20170303 01:02:55.652"></status>
+</kw>
+<status status="PASS" endtime="20170303 01:02:55.705" critical="yes" starttime="20170303 01:02:55.398"></status>
+</test>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20170303 01:02:58.858" starttime="20170303 01:02:55.706"></status>
+</kw>
+<doc>A test suite containing tests related to webpage elements.
+
+These tests are data-driven by their nature. They use a single
+keyword, specified with Test Template setting, that is called
+with different arguments to cover different scenarios.
+
+This suite also demonstrates using setups and teardowns in
+different levels.</doc>
+<status status="PASS" endtime="20170303 01:02:58.859" starttime="20170303 01:02:50.167"></status>
+</suite>
+<status status="PASS" endtime="20170303 01:02:58.862" starttime="20170303 01:02:23.704"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Test" pass="4">Test</stat>
+<stat fail="0" id="s1-s1" name="Anchors-Valid" pass="1">Test.Anchors-Valid</stat>
+<stat fail="0" id="s1-s2" name="GetContent" pass="1">Test.GetContent</stat>
+<stat fail="0" id="s1-s3" name="GetName" pass="1">Test.GetName</stat>
+<stat fail="0" id="s1-s4" name="GetXpath" pass="1">Test.GetXpath</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
