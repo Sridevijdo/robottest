@@ -44,10 +44,40 @@ GEUTX
     [Arguments]    ${elementXpath}
     ${elem} =    Get WebElement    xpath=${elementXpath}
 
-..Get Element Under Test By Content
-
 ..TODO: complete the test
+
+..Get Element Under Test By Content
 
 GEUTC
     [Arguments]    ${elementValue}
     ${elem} =    Get Text    link=${elementValue}
+
+..Get Element Under Test By Paragraph ID
+
+GEUTPID
+    [Arguments]    ${elementPID}
+    ${elem} =    Get WebElements    id=${elementPID}
+
+..Get Element Under Test By Tag
+
+GEUTT
+    [Arguments]    ${elementTag}    ${Expected}
+    ${elem} =    Element Should Contain    tag=${elementTag}    ${Expected}
+
+..Get Element Under Test By ClassName
+
+GEUTClass
+    [Arguments]    ${elementCss}
+    ${elem} =    Get WebElement    css=${div.elementCss}
+
+..Get Element Under Test By DivID
+
+GEUTDivId
+    [Arguments]    ${elementID}
+    ${elem} =    Get WebElement    id=${elementID}
+
+..Get Element Under Test By ID inside DivID
+
+GEUTIDDivId
+    [Arguments]    ${elementDivID}    ${elementID}
+    ${elem} =    Element Should Contain    id=${elementDivID}    id=${elementID}

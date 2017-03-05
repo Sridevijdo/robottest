@@ -10,15 +10,15 @@ Documentation     A test suite containing tests related to webpage elements.
 Suite Setup       Open Welcome Page
 Suite Teardown    Close Browser
 Test Setup        Go To Anchors Page
-Test Template     Anchor with Valid ID Should Pass
+Test Template     Anchor with ParagraphID Should Pass
 Resource          resource.robot
 
-*** Test Cases ***    AnchorText                  AnchorID    AnchorName    XPath
-Valid AnchorName      Self Referencing Link       a1          n2a1          //div[@id='a1']
-                      Self Referencing Index 2    a2          n22a2         //div[@id='a2']
-                      Self Referencing Index 2    a3          n22a3         //div[@id='a3']
+*** Test Cases ***    AnchorText                  ParagraphID    AnchorName    AnchorTag
+GEUTPID               Self Referencing Link       p1             n2a1          a
+                      Self Referencing Index 2    p1             n22a2         a
+                      Self Referencing Index 2    p1             n22a3         a
 
 *** Keywords ***
-Anchor with Valid ID Should Pass
-    [Arguments]    ${anchorText}    ${anchorID}    ${anchorName}    ${anchorXpath}
-    GEUTID    ${anchorID}
+Anchor with ParagraphID Should Pass
+    [Arguments]    ${anchorText}    ${ParagraphID}    ${anchorName}    ${anchorTag}    # test with specified paragraph id should pass
+    GEUTPID    ${ParagraphID}

@@ -10,15 +10,13 @@ Documentation     A test suite containing tests related to webpage elements.
 Suite Setup       Open Welcome Page
 Suite Teardown    Close Browser
 Test Setup        Go To Anchors Page
-Test Template     Anchor with Valid ID Should Pass
+Test Template     Text with anchorTag and Expected Should Pass
 Resource          resource.robot
 
-*** Test Cases ***    AnchorText                  AnchorID    AnchorName    XPath
-Valid AnchorName      Self Referencing Link       a1          n2a1          //div[@id='a1']
-                      Self Referencing Index 2    a2          n22a2         //div[@id='a2']
-                      Self Referencing Index 2    a3          n22a3         //div[@id='a3']
+*** Test Cases ***    AnchorText              AnchorTag    Expected
+GEUTT                 Anchors within a div    div          Anchors within a div
 
 *** Keywords ***
-Anchor with Valid ID Should Pass
-    [Arguments]    ${anchorText}    ${anchorID}    ${anchorName}    ${anchorXpath}
-    GEUTID    ${anchorID}
+Text with anchorTag and Expected Should Pass
+    [Arguments]    ${anchorText}    ${anchorTag}    ${Expected}    # test with specified tag should pass
+    GEUTT    ${anchorTag}    ${Expected}

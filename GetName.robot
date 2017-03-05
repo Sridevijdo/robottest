@@ -15,6 +15,8 @@ Resource          resource.robot
 
 *** Test Cases ***    AnchorText                  AnchorID    AnchorName    XPath
 GEUTN                 Self Referencing Index 2    d2a2        n22a2         //*[@id="d2a2"]
+                      Self Referencing Link       d2a2        n2a1          //*[@id="d2a2"]
+                      Self Referencing Index 2    d2a2        n22a3         //*[@id="d2a2"]
 
 *** Keywords ***
 Anchor with Valid Name Should Pass

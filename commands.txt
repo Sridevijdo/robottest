@@ -1,0 +1,31 @@
+1.	Pwd
+2.	Ls
+3.	Cd Desktop
+4.	Ls
+5.	Mkdir Test
+6.	Touch index.html
+7.	Touch styles.css
+8.	Touch commands.txt
+9.	Ls
+10.	Cp index.html index_2.html
+11.	Ls
+12.	Cd ..
+13.	Ls
+14.	Mkdir Destination
+15.	 Cd ..
+16.	cd test
+17.	ls
+18.	mv index_2.html ../Destination/index_2.html
+19.	ls
+20.	cd ..
+21.	cd Test
+22.	ls
+23.	rm styles.css
+24.	ls
+25.	cd ..
+26.	ls
+27.	rm -rf Destination
+28.	ls
+29.	
+30.	
+
